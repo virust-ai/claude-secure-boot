@@ -1,0 +1,22 @@
+[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+# Cortex-M4F with FPU (S32K148)
+runner = "probe-run --chip S32K148"
+
+rustflags = [
+  # This is needed if your flash or ram addresses are not aligned to 0x10000 in memory.x
+  # See https://github.com/rust-embedded/cortex-m-quickstart/pull/95
+  "-C", "link-arg=--nmagic",
+
+  # LLD (shipped with the Rust toolchain) is used as the default linker
+  "-C", "link-arg=-Tlink.x",
+
+  # Use hardware FPU (Floating Point Unit)
+  "-C", "target-feature=+fp-only-sp",
+]
+
+[build]
+# Set default target to Cortex-M4 with FPU
+target = "thumbv7em-none-eabihf"
+
+[env]
+DEFMT_LOG = "info"

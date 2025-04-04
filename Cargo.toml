@@ -1,0 +1,64 @@
+[package]
+name = "gridania-telematic-bootloader"
+version = "0.1.0"
+edition = "2021"
+authors = ["Ion Mobility Team"]
+description = "Secure bootloader for Gridania Telematic ECU using S32K148"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cortex-m = "0.7"         # Low level access to Cortex-M processors
+cortex-m-rt = "0.7"      # Startup code and minimal runtime for Cortex-M microcontrollers
+panic-halt = "0.2"       # Panic handler that halts on panic
+embedded-hal = "0.2"     # Hardware Abstraction Layer traits
+nb = "1.0"               # Non-blocking I/O traits
+defmt = "0.3"            # Logging framework for embedded devices
+defmt-rtt = "0.4"        # RTT backend for defmt
+
+# Hardware specific dependencies
+s32k1xx-hal = "0.1.0"    # Hardware abstraction layer for NXP S32K1xx MCUs (example - replace with actual crate)
+
+# UDS Protocol implementation
+heapless = "0.7"         # Static memory structures (for no_std environments)
+
+[dev-dependencies]
+panic-probe = { version = "0.3", features = ["print-defmt"] }
+
+[features]
+default = ["defmt-default"]
+defmt-default = []
+defmt-trace = []
+defmt-debug = []
+defmt-info = []
+defmt-warn = []
+defmt-error = []
+
+# Enable features for different build configurations
+debug = []
+release = []
+
+[[bin]]
+name = "gridania-telematic-bootloader"
+test = false
+bench = false
+
+[[example]]
+name = "basic_boot"
+path = "examples/basic_boot.rs"
+
+[[example]]
+name = "flash_test"
+path = "examples/flash_test.rs"
+
+[profile.dev]
+codegen-units = 1
+debug = true
+lto = false
+opt-level = 0
+
+[profile.release]
+codegen-units = 1
+debug = true
+lto = true
+opt-level = "s"  # Optimize for size
