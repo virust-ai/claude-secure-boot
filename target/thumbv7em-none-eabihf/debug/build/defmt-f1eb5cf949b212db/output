@@ -1,0 +1,3 @@
+cargo:rustc-link-search=/Users/kelvin/ViRust-AI/claude-secure-boot/Gridania_TelematicECUBoot/rust_impl/target/thumbv7em-none-eabihf/debug/build/defmt-f1eb5cf949b212db/out
+cargo:rustc-check-cfg=cfg(c_variadic)
+cargo:rustc-check-cfg=cfg(no_cas)

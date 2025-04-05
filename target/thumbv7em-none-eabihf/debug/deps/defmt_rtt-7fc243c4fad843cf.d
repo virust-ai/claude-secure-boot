@@ -1,0 +1,12 @@
+/Users/kelvin/ViRust-AI/claude-secure-boot/Gridania_TelematicECUBoot/rust_impl/target/thumbv7em-none-eabihf/debug/deps/libdefmt_rtt-7fc243c4fad843cf.rmeta: /Users/kelvin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/defmt-rtt-0.4.2/src/lib.rs /Users/kelvin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/defmt-rtt-0.4.2/src/channel.rs /Users/kelvin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/defmt-rtt-0.4.2/src/consts.rs /Users/kelvin/ViRust-AI/claude-secure-boot/Gridania_TelematicECUBoot/rust_impl/target/thumbv7em-none-eabihf/debug/build/defmt-rtt-83fa5813c76c2ab5/out/consts.rs
+
+/Users/kelvin/ViRust-AI/claude-secure-boot/Gridania_TelematicECUBoot/rust_impl/target/thumbv7em-none-eabihf/debug/deps/libdefmt_rtt-7fc243c4fad843cf.rlib: /Users/kelvin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/defmt-rtt-0.4.2/src/lib.rs /Users/kelvin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/defmt-rtt-0.4.2/src/channel.rs /Users/kelvin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/defmt-rtt-0.4.2/src/consts.rs /Users/kelvin/ViRust-AI/claude-secure-boot/Gridania_TelematicECUBoot/rust_impl/target/thumbv7em-none-eabihf/debug/build/defmt-rtt-83fa5813c76c2ab5/out/consts.rs
+
+/Users/kelvin/ViRust-AI/claude-secure-boot/Gridania_TelematicECUBoot/rust_impl/target/thumbv7em-none-eabihf/debug/deps/defmt_rtt-7fc243c4fad843cf.d: /Users/kelvin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/defmt-rtt-0.4.2/src/lib.rs /Users/kelvin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/defmt-rtt-0.4.2/src/channel.rs /Users/kelvin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/defmt-rtt-0.4.2/src/consts.rs /Users/kelvin/ViRust-AI/claude-secure-boot/Gridania_TelematicECUBoot/rust_impl/target/thumbv7em-none-eabihf/debug/build/defmt-rtt-83fa5813c76c2ab5/out/consts.rs
+
+/Users/kelvin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/defmt-rtt-0.4.2/src/lib.rs:
+/Users/kelvin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/defmt-rtt-0.4.2/src/channel.rs:
+/Users/kelvin/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/defmt-rtt-0.4.2/src/consts.rs:
+/Users/kelvin/ViRust-AI/claude-secure-boot/Gridania_TelematicECUBoot/rust_impl/target/thumbv7em-none-eabihf/debug/build/defmt-rtt-83fa5813c76c2ab5/out/consts.rs:
+
+# env-dep:OUT_DIR=/Users/kelvin/ViRust-AI/claude-secure-boot/Gridania_TelematicECUBoot/rust_impl/target/thumbv7em-none-eabihf/debug/build/defmt-rtt-83fa5813c76c2ab5/out

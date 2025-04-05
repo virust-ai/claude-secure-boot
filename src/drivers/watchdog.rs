@@ -1,4 +1,4 @@
-use defmt::{debug, info};
+// use defmt::{debug, info};
 use crate::hal::s32k148::peripherals::WDOG;
 
 /// Watchdog timer controller for S32K148
@@ -19,7 +19,7 @@ impl Watchdog {
     
     /// Initialize the watchdog timer
     pub fn init(&mut self) {
-        info!("Initializing watchdog timer");
+        // println!("Initializing watchdog timer");
         
         // Configure watchdog timer
         // In a real implementation, this would:
@@ -29,7 +29,7 @@ impl Watchdog {
         // 4. Enable watchdog
         
         self.enabled = true;
-        debug!("Watchdog initialized with timeout of {} ms", self.timeout_ms);
+        // println!("Watchdog initialized with timeout of {} ms", self.timeout_ms);
     }
     
     /// Service (feed) the watchdog to prevent reset
@@ -47,7 +47,7 @@ impl Watchdog {
             // Note that many systems lock the watchdog configuration after initialization
             
             self.enabled = false;
-            debug!("Watchdog disabled");
+            // println!("Watchdog disabled");
         }
         
         Ok(())
@@ -68,7 +68,7 @@ impl Watchdog {
         }
         
         self.timeout_ms = timeout_ms;
-        debug!("Watchdog timeout set to {} ms", timeout_ms);
+        // println!("Watchdog timeout set to {} ms", timeout_ms);
         
         Ok(())
     }

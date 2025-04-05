@@ -5,3 +5,4 @@ pub mod communication;
 pub mod protocol;
 pub mod drivers;
 pub mod hal;
+pub mod defmt;

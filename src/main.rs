@@ -63,9 +63,3 @@ fn check_hmi_power(gpio: &Gpio) {
         gpio.set_port_c(5);
     }
 }
-
-#[defmt::panic_handler]
-fn panic() -> ! {
-    cortex_m::asm::bkpt();
-    loop {}
-}

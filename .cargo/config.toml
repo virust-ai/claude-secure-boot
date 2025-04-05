@@ -9,9 +9,6 @@ rustflags = [
 
   # LLD (shipped with the Rust toolchain) is used as the default linker
   "-C", "link-arg=-Tlink.x",
-
-  # Use hardware FPU (Floating Point Unit)
-  "-C", "target-feature=+fp-only-sp",
 ]
 
 [build]

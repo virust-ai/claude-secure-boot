@@ -1,5 +1,6 @@
-use defmt::{debug, info};
-use crate::hal::s32k148::peripherals::{SMC, RCM, PMC};
+// use defmt::{debug, info};
+// For demonstration only, in a real implementation these would be used
+// use crate::hal::s32k148::peripherals::{SMC, RCM, PMC};
 
 /// Power management controller for S32K148
 pub struct Power {
@@ -19,12 +20,12 @@ impl Power {
     
     /// Initialize the power controller
     pub fn init(&mut self) {
-        info!("Initializing power manager");
+        // println!("Initializing power manager");
         
         // Detect reset cause
         self.detect_reset_cause();
         
-        info!("Reset cause: {:?}", self.reset_cause);
+        // println!("Reset cause: {}", self.reset_cause);
     }
     
     /// Get the current reset cause
@@ -34,7 +35,7 @@ impl Power {
     
     /// Set power mode
     pub fn set_power_mode(&mut self, mode: PowerMode) -> Result<(), PowerError> {
-        debug!("Setting power mode to {:?}", mode);
+        // println!("Setting power mode to {:?}", mode);
         
         // In a real implementation, this would configure the SMC registers
         // to transition to the desired power mode
@@ -79,6 +80,21 @@ pub enum ResetCause {
     Lockup,
     Jtag,
     LowVoltage,
+}
+
+impl core::fmt::Display for ResetCause {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        match self {
+            ResetCause::Unknown => write!(f, "Unknown"),
+            ResetCause::PowerOn => write!(f, "PowerOn"),
+            ResetCause::External => write!(f, "External"),
+            ResetCause::Watchdog => write!(f, "Watchdog"),
+            ResetCause::Software => write!(f, "Software"),
+            ResetCause::Lockup => write!(f, "Lockup"),
+            ResetCause::Jtag => write!(f, "Jtag"),
+            ResetCause::LowVoltage => write!(f, "LowVoltage"),
+        }
+    }
 }
 
 /// Power management error types

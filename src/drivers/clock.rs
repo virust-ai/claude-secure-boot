@@ -1,4 +1,4 @@
-use defmt::{debug, info};
+// use defmt::{debug, info};
 use crate::hal::s32k148::peripherals::SCG;
 
 /// Clock configuration for S32K148
@@ -19,7 +19,7 @@ impl Clock {
     
     /// Initialize the clock system
     pub fn init(&mut self) {
-        info!("Initializing clock system");
+        // println!("Initializing clock system");
         
         // Configure SCG clock settings for the S32K148
         // This would involve a specific sequence to:
@@ -28,7 +28,7 @@ impl Clock {
         // 3. Set up system clock dividers
         // 4. Switch to the desired clock source
         
-        debug!("Clock system initialized at {} Hz", self.system_clock_hz);
+        // println!("Clock system initialized at {} Hz", self.system_clock_hz);
     }
     
     /// Get the system clock frequency in Hz

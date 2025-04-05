@@ -1,4 +1,4 @@
-use defmt::{debug, info};
+// use defmt::{debug, info};
 use crate::hal::s32k148::peripherals::{GPIO, PORT};
 
 /// GPIO controller for S32K148
@@ -14,7 +14,7 @@ impl Gpio {
     
     /// Initialize the GPIO controller
     pub fn init(&mut self) {
-        info!("Initializing GPIO controller");
+        // println!("Initializing GPIO controller");
         
         // Configure GPIO pins for various peripherals
         // In the real implementation, this would configure specific pins
@@ -29,19 +29,19 @@ impl Gpio {
     
     /// Set a specific pin on port C
     pub fn set_port_c(&self, pin: u8) {
-        debug!("Setting PORTC pin {}", pin);
+        // println!("Setting PORTC pin {}", pin);
         // In a real implementation, this would use the PORT.PSOR register
     }
     
     /// Clear a specific pin on port C
     pub fn clear_port_c(&self, pin: u8) {
-        debug!("Clearing PORTC pin {}", pin);
+        // println!("Clearing PORTC pin {}", pin);
         // In a real implementation, this would use the PORT.PCOR register
     }
     
     /// Configure a pin for a specific function
     pub fn configure_pin(&self, port: Port, pin: u8, config: PinConfig) {
-        debug!("Configuring pin {:?}{} as {:?}", port, pin, config);
+        // println!("Configuring pin {:?}{} as {:?}", port, pin, config);
         // In a real implementation, this would configure the pin's PCR register
     }
 }
